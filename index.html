@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Popeye Boat Experience</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="hero-content">
+      <h1>Popeye Boat Experience</h1>
+      <p>Gite in barca nel Golfo di Follonica e nelle cale di Scarlino</p>
+
+      <div class="hero-buttons">
+        <a href="https://wa.me/390000000000" class="btn primary">Prenota su WhatsApp</a>
+        <a href="#contatti" class="btn secondary">Richiedi info</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- GITE -->
+  <section class="section">
+    <h2>Le nostre gite</h2>
+
+    <div class="cards">
+      <div class="card">
+        <h3>Cale di Scarlino</h3>
+        <p>Un tour rilassante tra acque cristalline e calette incontaminate, perfetto per nuotare e godersi il mare.</p>
+      </div>
+
+      <div class="card">
+        <h3>Tramonto in barca</h3>
+        <p>Un’esperienza romantica e suggestiva per ammirare il sole che cala sul mare, con musica e relax.</p>
+      </div>
+
+      <div class="card">
+        <h3>Gita privata</h3>
+        <p>La barca tutta per voi: scegliete orari, tappe e ritmo della giornata.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- EVENTI -->
+  <section class="section light">
+    <h2>Eventi speciali</h2>
+    <p class="center">
+      Organizziamo esperienze personalizzate per:
+      <br>compleanni, addii al nubilato/celibato, anniversari ed eventi privati.
+    </p>
+  </section>
+
+  <!-- BARCA -->
+  <section class="section">
+    <h2>La barca</h2>
+    <p class="center">
+      Sciallino 33 – comoda, sicura e perfetta per vivere il mare in totale relax.
+    </p>
+  </section>
+
+  <!-- CONTATTI -->
+  <section class="section light" id="contatti">
+    <h2>Contattaci</h2>
+
+    <form name="contatti" method="POST" data-netlify="true" class="contact-form">
+      <input type="hidden" name="form-name" value="contatti">
+
+      <input type="text" name="nome" placeholder="Nome" required>
+      <input type="email" name="email" placeholder="Email" required>
+      <input type="text" name="data" placeholder="Data indicativa">
+      <textarea name="messaggio" placeholder="Messaggio" required></textarea>
+
+      <button type="submit" class="btn primary">Invia richiesta</button>
+    </form>
+
+    <p class="center small">
+      Oppure scrivici direttamente su WhatsApp per una risposta immediata.
+    </p>
+  </section>
+
+  <footer>
+    <p>© Popeye Boat Experience</p>
+  </footer>
+
+</body>
+</html>
