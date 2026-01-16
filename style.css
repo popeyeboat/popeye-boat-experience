@@ -13,11 +13,10 @@ body {
 /* HERO */
 .hero {
   height: 100vh;
-  background: linear-gradient(
-      rgba(0, 0, 0, 0.45),
-      rgba(0, 0, 0, 0.45)
-    ),
-    url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e");
+  background:
+    radial-gradient(1200px 600px at 20% 20%, rgba(14, 165, 164, 0.35), transparent 60%),
+    linear-gradient(rgba(4, 20, 35, 0.55), rgba(4, 20, 35, 0.25)),
+    url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1920&q=80");
   background-size: cover;
   background-position: center;
   display: flex;
@@ -28,18 +27,32 @@ body {
 }
 
 .hero-content {
-  max-width: 800px;
-  padding: 20px;
+  max-width: 850px;
+  padding: 24px;
 }
 
 .hero h1 {
-  font-size: 3rem;
-  margin-bottom: 10px;
+  font-size: 3.2rem;
+  letter-spacing: 0.2px;
+  margin-bottom: 12px;
 }
 
 .hero p {
-  font-size: 1.2rem;
-  margin-bottom: 30px;
+  font-size: 1.15rem;
+  opacity: 0.95;
+  margin-bottom: 22px;
+}
+
+.badge {
+  display: inline-block;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.14);
+  border: 1px solid rgba(255,255,255,0.18);
+  backdrop-filter: blur(8px);
+  margin-bottom: 14px;
+  font-weight: 700;
+  font-size: 0.95rem;
 }
 
 /* BUTTONS */
