@@ -1,138 +1,581 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Popeye Boat Experience</title>
-  <link rel="icon" href="assets/images/logo_popeye.svg" type="image/svg+xml">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Popeye Boat Experience | Boat Tours in Scarlino</title>
+  <meta name="description" content="Escursioni in barca nel Golfo di Follonica: Cala Violina, Cala Martina, Cala Civette e molto altro. Prenota su WhatsApp." />
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="Popeye Boat Experience">
+        <span class="brand-mark">⚓</span>
+        <span class="brand-text">Popeye Boat Experience</span>
+      </a>
 
-  <!-- HERO -->
-  <header class="hero">
-      <!-- LOGO -->
-    <div class="logo-top">
-      <img src="assets/images/logo_popeye.svg" alt="Popeye Boat Experience logo">
-    </div>
+      <nav class="nav" aria-label="Primary">
+        <a href="#tours" data-i18n="nav_tours">Gite</a>
+        <a href="#boat" data-i18n="nav_boat">La barca</a>
+        <a href="#gallery" data-i18n="nav_gallery">Foto</a>
+        <a href="#reviews" data-i18n="nav_reviews">Recensioni</a>
+        <a href="#faq" data-i18n="nav_faq">FAQ</a>
+        <a href="#contacts" data-i18n="nav_contacts">Contatti</a>
+      </nav>
 
-    <div class="hero-content">
-      <h1>Popeye Boat Experience</h1>
-      <p>Scopri il mare più bello della Toscana con le nostre gite in barca tra Follonica e le cale di Scarlino</p>
-
-      <div class="hero-buttons">
-        <a href="https://wa.me/390000000000" class="btn primary">Prenota su WhatsApp</a>
-        <a href="#contatti" class="btn secondary">Richiedi info</a>
+      <div class="header-ctas">
+        <button class="lang-toggle" id="langToggle" type="button" aria-label="Toggle language">EN</button>
+        <a class="btn btn-ghost" id="igLink" href="#" target="_blank" rel="noreferrer">Instagram</a>
+        <a class="btn btn-primary" id="waLink" href="#" target="_blank" rel="noreferrer">WhatsApp</a>
       </div>
     </div>
   </header>
 
-  <!-- GITE -->
-  <section class="section">
-    <h2>Le nostre gite</h2>
+  <!-- HERO -->
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <p class="kicker" data-i18n="hero_kicker">Golfo di Follonica • Cale di Scarlino</p>
+          <h1 class="hero-title" data-i18n="hero_title">Vivi il mare della Toscana, come si deve.</h1>
+          <p class="hero-sub" data-i18n="hero_sub">
+            Escursioni in barca da Marina di Scarlino tra acque cristalline, snorkeling e relax.
+          </p>
 
-    <div class="cards">
-      <div class="card">
-        <h3>Delfino</h3>
-        <p>Partenza alle ore 9 dalla Marina di Scarlino per un’indimenticabile giornata alla scoperta delle cale più suggestive del Golfo: Cala Martina, Cala Violina e Cala Civette.
-        Durante il tour ci fermeremo in una di queste meravigliose baie per una sosta bagno nelle acque cristalline, accompagnata da una piccola colazione a bordo, immersi nella tranquillità della costa.
-        Proseguiremo poi in direzione Punta Ala, dove ci concederemo una pausa pranzo con sosta sotto l’incantevole Castello di Punta Ala, in uno degli angoli più affascinanti della zona.
-        Il rientro in porto è previsto per le ore 17, con negli occhi il mare e nel cuore una giornata da ricordare.</p>
+          <div class="hero-ctas">
+            <a class="btn btn-primary btn-lg" id="waHero" href="#" target="_blank" rel="noreferrer" data-i18n="cta_whatsapp">
+              Prenota su WhatsApp
+            </a>
+            <a class="btn btn-ghost btn-lg" id="igHero" href="#" target="_blank" rel="noreferrer" data-i18n="cta_instagram">
+              Scrivici su Instagram
+            </a>
+          </div>
+
+          <div class="trust">
+            <span class="trust-pill" data-i18n="trust_departure">Partenza: Marina di Scarlino</span>
+            <span class="trust-pill" data-i18n="trust_private">Tour privati su richiesta</span>
+          </div>
+        </div>
+
+        <div class="hero-card">
+          <div class="hero-card-inner">
+            <h2 data-i18n="quick_title">Info rapide</h2>
+            <ul class="quick-list">
+              <li><strong data-i18n="quick_where">Dove:</strong> Marina di Scarlino</li>
+              <li><strong data-i18n="quick_lang">Lingue:</strong> IT / EN</li>
+              <li><strong data-i18n="quick_contact">Contatto:</strong> WhatsApp o Instagram</li>
+            </ul>
+            <a class="btn btn-primary w-full" id="waQuick" href="#" target="_blank" rel="noreferrer" data-i18n="cta_whatsapp">
+              Prenota su WhatsApp
+            </a>
+            <p class="small muted" data-i18n="quick_note">Rispondiamo il prima possibile 😊</p>
+          </div>
+        </div>
       </div>
+    </section>
 
-      <div class="card">
-        <h3>Tartaruga di Mare</h3>
-        <p>Partenza alle ore 9 dalla Marina di Scarlino per un suggestivo tour lungo la costa, alla scoperta delle splendide Cala Martina, Cala Violina e Cala Civette.
-        In ogni cala è prevista una sosta per il bagno, per vivere appieno il mare, tuffarsi nelle acque limpide e godersi la quiete di questi angoli incontaminati.
-        Prima del rientro ci fermeremo per un piacevole aperitivo a bordo, il modo perfetto per salutare il mare e rilassarsi ancora un po’.
-        Il rientro in porto è previsto per le ore 13.</p>
+    <!-- TOURS -->
+    <section class="section" id="tours">
+      <div class="container">
+        <header class="section-head">
+          <h2 data-i18n="tours_title">Le nostre gite</h2>
+          <p class="section-sub" data-i18n="tours_sub">Semplici da scegliere, bellissime da vivere.</p>
+        </header>
+
+        <div class="grid">
+          <!-- Delfino -->
+          <article class="card">
+            <div class="card-top">
+              <h3>Delfino</h3>
+              <div class="meta">
+                <span data-i18n="meta_dep">🕘 09:00</span>
+                <span data-i18n="meta_return_17">↩︎ 17:00</span>
+                <span data-i18n="meta_full_day">⏱️ Intera giornata</span>
+              </div>
+              <p class="lead" data-i18n="delfino_lead">Cale + sosta bagno + colazione a bordo + pausa pranzo in zona Punta Ala.</p>
+            </div>
+
+            <details class="details">
+              <summary data-i18n="read_more">Descrizione completa</summary>
+              <p data-i18n="delfino_text">
+                Partenza alle ore 9 dalla Marina di Scarlino per una giornata tra Cala Martina, Cala Violina e Cala Civette.
+                Sosta bagno in una delle baie e piccola colazione a bordo. Proseguimento verso Punta Ala con pausa pranzo.
+                Rientro previsto per le ore 17.
+              </p>
+            </details>
+
+            <a class="btn btn-primary w-full tour-wa" href="#" target="_blank" rel="noreferrer" data-tour="Delfino" data-i18n="cta_book">
+              Prenota questa gita
+            </a>
+          </article>
+
+          <!-- Tartaruga di Mare -->
+          <article class="card">
+            <div class="card-top">
+              <h3>Tartaruga di Mare</h3>
+              <div class="meta">
+                <span>🕘 09:00</span>
+                <span>↩︎ 13:00</span>
+                <span data-i18n="meta_morning">⏱️ Mattina</span>
+              </div>
+              <p class="lead" data-i18n="tarta_lead">Tour costa + soste bagno nelle cale + aperitivo a bordo prima del rientro.</p>
+            </div>
+
+            <details class="details">
+              <summary data-i18n="read_more">Descrizione completa</summary>
+              <p data-i18n="tarta_text">
+                Partenza alle ore 9 dalla Marina di Scarlino. Cala Martina, Cala Violina e Cala Civette con soste bagno.
+                Aperitivo a bordo prima del rientro. Rientro previsto per le ore 13.
+              </p>
+            </details>
+
+            <a class="btn btn-primary w-full tour-wa" href="#" target="_blank" rel="noreferrer" data-tour="Tartaruga di Mare" data-i18n="cta_book">
+              Prenota questa gita
+            </a>
+          </article>
+
+          <!-- Cicala -->
+          <article class="card">
+            <div class="card-top">
+              <h3>Cicala</h3>
+              <div class="meta">
+                <span>🕕 18:00</span>
+                <span>↩︎ 21:00</span>
+                <span data-i18n="meta_sunset">⏱️ Tramonto</span>
+              </div>
+              <p class="lead" data-i18n="cicala_lead">Sosta bagno al tramonto + apericena a bordo, atmosfera super.</p>
+            </div>
+
+            <details class="details">
+              <summary data-i18n="read_more">Descrizione completa</summary>
+              <p data-i18n="cicala_text">
+                Partenza alle ore 18 dalla Marina di Scarlino. Cala Martina, Cala Violina e Cala Civette.
+                Sosta bagno e apericena a bordo. Rientro previsto per le ore 21.
+              </p>
+            </details>
+
+            <a class="btn btn-primary w-full tour-wa" href="#" target="_blank" rel="noreferrer" data-tour="Cicala" data-i18n="cta_book">
+              Prenota questa gita
+            </a>
+          </article>
+
+          <!-- Un'Occhiata e via! -->
+          <article class="card">
+            <div class="card-top">
+              <h3>Un'Occhiata e via!</h3>
+              <div class="meta">
+                <span>🕙 10:00</span>
+                <span>↩︎ 12:30</span>
+                <span data-i18n="meta_short">⏱️ Breve</span>
+              </div>
+              <p class="lead" data-i18n="occhiata_lead">Cala Violina + bagno con le “Occhiate”. Consigliata maschera.</p>
+            </div>
+
+            <details class="details">
+              <summary data-i18n="read_more">Descrizione completa</summary>
+              <p data-i18n="occhiata_text">
+                Partenza alle ore 10 verso Cala Violina. Sosta bagno e snorkeling con le Occhiate.
+                Piccolo aperitivo a bordo. Rientro previsto per le ore 12:30.
+              </p>
+            </details>
+
+            <a class="btn btn-primary w-full tour-wa" href="#" target="_blank" rel="noreferrer" data-tour="Un'Occhiata e via!" data-i18n="cta_book">
+              Prenota questa gita
+            </a>
+          </article>
+
+          <!-- Il Volo dello Sparviero -->
+          <article class="card">
+            <div class="card-top">
+              <h3>Il Volo dello Sparviero</h3>
+              <div class="meta">
+                <span>🕘 09:00</span>
+                <span>↩︎ 14:00</span>
+                <span data-i18n="meta_islet">⏱️ Isolotto</span>
+              </div>
+              <p class="lead" data-i18n="sparviero_lead">Periplo dell’isolotto + caletta nord + snorkeling + aperitivo toscano.</p>
+            </div>
+
+            <details class="details">
+              <summary data-i18n="read_more">Descrizione completa</summary>
+              <p data-i18n="sparviero_text">
+                Partenza alle ore 9 verso l’Isolotto dello Sparviero. Periplo con mare calmo, poi sosta bagno nella caletta nord.
+                Aperitivo con stuzzichini toscani. Rientro previsto per le ore 14.
+              </p>
+            </details>
+
+            <a class="btn btn-primary w-full tour-wa" href="#" target="_blank" rel="noreferrer" data-tour="Il Volo dello Sparviero" data-i18n="cta_book">
+              Prenota questa gita
+            </a>
+          </article>
+        </div>
       </div>
+    </section>
 
-      <div class="card">
-        <h3>Cicala</h3>
-        <p>Partenza alle ore 18 dalla Marina di Scarlino per un affascinante tour serale lungo la costa, alla scoperta delle iconiche Cala Martina, Cala Violina e Cala Civette.
-        Ci fermeremo in una delle cale più suggestive per una sosta bagno, mentre il sole cala lentamente all’orizzonte e il mare si tinge di colori caldi e avvolgenti.
-        A seguire, un rilassante apericena a bordo, cullati dalle onde e dall’atmosfera unica del tramonto sul Golfo.
-        Il rientro in porto è previsto per le ore 21, con la sensazione di aver vissuto un momento davvero speciale.</p>
+    <!-- EVENTS -->
+    <section class="section section-alt" id="events">
+      <div class="container">
+        <header class="section-head">
+          <h2 data-i18n="events_title">Eventi speciali</h2>
+          <p class="section-sub" data-i18n="events_sub">Compleanni, addii, anniversari e tour privati: lo organizziamo su misura.</p>
+        </header>
+
+        <div class="cta-panel">
+          <p data-i18n="events_cta">Scrivici e raccontaci che tipo di esperienza vuoi: ti proponiamo l’opzione migliore.</p>
+          <div class="cta-row">
+            <a class="btn btn-primary" id="waEvents" href="#" target="_blank" rel="noreferrer" data-i18n="cta_whatsapp">Prenota su WhatsApp</a>
+            <a class="btn btn-ghost" id="igEvents" href="#" target="_blank" rel="noreferrer" data-i18n="cta_instagram">Scrivici su Instagram</a>
+          </div>
+        </div>
       </div>
+    </section>
 
-      <div class="card">
-        <h3>Un'Occhiata e via!</h3>
-        <p>Partenza alle ore 10 dalla Marina di Scarlino in direzione Cala Violina, una delle baie più amate e suggestive della costa.
-        Qui ci fermeremo per una sosta bagno davvero speciale, nuotando insieme alle Occhiate, piccoli e curiosi pesci del nostro mare, totalmente innocui, che si avvicineranno naturalmente alla barca.
-        Per vivere al meglio questa esperienza consigliamo occhialini o maschera, così da poterli ammirare sott’acqua in tutta tranquillità.
-        A seguire, un piccolo aperitivo a bordo prima del rientro in porto, previsto per le ore 12:30.</p>
+    <!-- BOAT -->
+    <section class="section" id="boat">
+      <div class="container">
+        <header class="section-head">
+          <h2 data-i18n="boat_title">La barca</h2>
+          <p class="section-sub" data-i18n="boat_sub">Sciallino 33: comoda, sicura, perfetta per vivere il mare in relax.</p>
+        </header>
+
+        <div class="two-col">
+          <div class="card soft">
+            <h3 data-i18n="boat_why_title">Perché è speciale</h3>
+            <ul class="bullets">
+              <li data-i18n="boat_b1">Stabile e confortevole (ideale anche per famiglie)</li>
+              <li data-i18n="boat_b2">Spazi per stendersi e rilassarsi</li>
+              <li data-i18n="boat_b3">Perfetta per snorkeling e soste in cala</li>
+            </ul>
+          </div>
+
+          <div class="card soft">
+            <h3 data-i18n="boat_onboard_title">A bordo</h3>
+            <ul class="bullets">
+              <li data-i18n="boat_o1">Acqua e bibite</li>
+              <li data-i18n="boat_o2">Snack / aperitivo (in base al tour)</li>
+              <li data-i18n="boat_o3">Consigli su cosa portare e dove fare snorkeling</li>
+            </ul>
+          </div>
+        </div>
       </div>
+    </section>
 
-      <div class="card">
-        <h3>Il Volo dello Sparviero</h3>
-        <p>Partenza alle ore 9 dalla Marina di Scarlino in direzione dell’Isolotto dello Sparviero, che ammireremo nella suggestiva luce del mattino. Con mare calmo ne faremo il periplo, scoprendo anche il lato più selvaggio affacciato sul mare aperto, da cui si apre una splendida vista sulle isole dell’Arcipelago Toscano.
-        Ci fermeremo poi nella caletta esposta a nord per una sosta bagno nelle acque cristalline, ideale per snorkeling e per osservare da vicino la ricca fauna marina.
-        A seguire, aperitivo a bordo con stuzzichini toscani, frutta, bibite e acqua, e momenti di relax a prua, cullati dalle onde.
-        Il rientro in porto è previsto per le ore 14.</p>
+    <!-- GALLERY -->
+    <section class="section section-alt" id="gallery">
+      <div class="container">
+        <header class="section-head">
+          <h2 data-i18n="gallery_title">Foto</h2>
+          <p class="section-sub" data-i18n="gallery_sub">Qualche scatto — e il resto lo trovi su Instagram.</p>
+        </header>
+
+        <div class="gallery-grid">
+          <div class="ph">Barca</div>
+          <div class="ph">Interni</div>
+          <div class="ph">Cale</div>
+          <div class="ph">Sosta bagno</div>
+          <div class="ph">Tramonto</div>
+          <div class="ph">Esperienze</div>
+        </div>
+
+        <div class="center mt-18">
+          <a class="btn btn-ghost" id="igGallery" href="#" target="_blank" rel="noreferrer" data-i18n="cta_see_instagram">Guarda su Instagram</a>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- EVENTI -->
-  <section class="section light">
-    <h2>Eventi speciali</h2>
-    <p class="center">
-      Organizziamo esperienze personalizzate per:
-      <br>compleanni, addii al nubilato/celibato, anniversari ed eventi privati.
-    </p>
-  </section>
+    <!-- REVIEWS -->
+    <section class="section" id="reviews">
+      <div class="container">
+        <header class="section-head">
+          <h2 data-i18n="reviews_title">Recensioni</h2>
+          <p class="section-sub" data-i18n="reviews_sub">Leggi cosa dicono su Google.</p>
+        </header>
 
-  <!-- BARCA -->
-  <section class="section">
-    <h2>La barca</h2>
-    <p class="center">
-      Sciallino 33 – comoda, sicura e perfetta per vivere il mare in totale relax.
-    </p>
-  </section>
+        <div class="card">
+          <p class="muted" data-i18n="reviews_note">
+            Qui inseriamo l’embed delle recensioni Google (o un pulsante diretto alla pagina).
+          </p>
 
-    <!-- FOTO (PLACEHOLDER) -->
-  <section class="section light" id="foto">
-    <h2>Foto</h2>
-    <p class="center">Qualche scatto della barca e delle cale (in arrivo).</p>
+          <div class="cta-row">
+            <a class="btn btn-primary" id="googleReviewsLink" href="#" target="_blank" rel="noreferrer" data-i18n="cta_open_reviews">
+              Apri recensioni Google
+            </a>
+            <a class="btn btn-ghost" id="googleLeaveLink" href="#" target="_blank" rel="noreferrer" data-i18n="cta_leave_review">
+              Lascia una recensione
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <div class="photo-grid">
-      <div class="photo-ph">Foto barca (in arrivo)</div>
-      <div class="photo-ph">Interni (in arrivo)</div>
-      <div class="photo-ph">Cale di Scarlino (in arrivo)</div>
-      <div class="photo-ph">Sosta bagno (in arrivo)</div>
-      <div class="photo-ph">Tramonto (in arrivo)</div>
-      <div class="photo-ph">Esperienze (in arrivo)</div>
-    </div>
-  </section>
+    <!-- FAQ -->
+    <section class="section section-alt" id="faq">
+      <div class="container">
+        <header class="section-head">
+          <h2 data-i18n="faq_title">FAQ</h2>
+        </header>
 
-  <!-- CONTATTI -->
-  <section class="section light" id="contatti">
-    <h2>Contattaci</h2>
+        <div class="faq">
+          <details class="details">
+            <summary data-i18n="faq1_q">Cosa devo portare?</summary>
+            <p data-i18n="faq1_a">Costume, asciugamano, crema solare, cappello e (consigliata) maschera per snorkeling.</p>
+          </details>
+          <details class="details">
+            <summary data-i18n="faq2_q">Se c’è vento o mare mosso?</summary>
+            <p data-i18n="faq2_a">Valutiamo insieme la sicurezza: in caso di meteo sfavorevole riprogrammiamo o rimborsiamo secondo accordi.</p>
+          </details>
+          <details class="details">
+            <summary data-i18n="faq3_q">Bambini a bordo?</summary>
+            <p data-i18n="faq3_a">Sì, la barca è stabile e adatta anche alle famiglie. Scrivici per età e dettagli.</p>
+          </details>
+        </div>
+      </div>
+    </section>
 
-    <form name="contatti" method="POST" data-netlify="true" class="contact-form">
-      <input type="hidden" name="form-name" value="contatti">
+    <!-- CONTACTS -->
+    <section class="section" id="contacts">
+      <div class="container">
+        <header class="section-head">
+          <h2 data-i18n="contacts_title">Contatti</h2>
+          <p class="section-sub" data-i18n="contacts_sub">Scrivici su WhatsApp o Instagram: ti rispondiamo veloce.</p>
+        </header>
 
-      <input type="text" name="nome" placeholder="Nome" required>
-      <input type="email" name="email" placeholder="Email" required>
-      <input type="text" name="data" placeholder="Data indicativa">
-      <textarea name="messaggio" placeholder="Messaggio" required></textarea>
+        <div class="two-col">
+          <div class="card">
+            <h3 data-i18n="contacts_write">Scrivici</h3>
+            <p><strong>WhatsApp:</strong> +39 9985429335</p>
+            <p><strong>Email:</strong> popeyeboatexperience@hotmail.com</p>
+            <div class="cta-row mt-12">
+              <a class="btn btn-primary" id="waContacts" href="#" target="_blank" rel="noreferrer" data-i18n="cta_whatsapp">Prenota su WhatsApp</a>
+              <a class="btn btn-ghost" id="igContacts" href="#" target="_blank" rel="noreferrer" data-i18n="cta_instagram">Scrivici su Instagram</a>
+            </div>
+          </div>
 
-      <button type="submit" class="btn primary">Invia richiesta</button>
-    </form>
+          <div class="card">
+            <h3 data-i18n="contacts_where">Dove siamo</h3>
+            <p data-i18n="contacts_port">Imbarco: Marina di Scarlino</p>
+            <div class="map">
+              <!-- Metti qui l’embed di Google Maps (ti guido allo step successivo) -->
+              <div class="ph">Google Maps embed</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <p class="center small">
-      Oppure scrivici direttamente su WhatsApp per una risposta immediata.
-    </p>
-  </section>
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>© <span id="year"></span> Popeye Boat Experience</p>
+        <p class="muted">Marina di Scarlino • IT/EN</p>
+      </div>
+    </footer>
+  </main>
 
-  <footer>
-    <p>© Popeye Boat Experience</p>
-  </footer>
+  <script>
+    // ==== CONFIG ====
+    const WHATSAPP_NUMBER = "399985429335";
+    const EMAIL = "popeyeboatexperience@hotmail.com";
+    const INSTAGRAM_URL = "https://instagram.com/popeyeboatexperience"; // <-- se diverso, lo cambiamo
+    const GOOGLE_REVIEWS_URL = "#"; // <-- mi dai link pagina Google e lo metto
+    const GOOGLE_LEAVE_REVIEW_URL = "#"; // <-- link "lascia recensione"
 
+    function waUrl(message) {
+      const text = encodeURIComponent(message);
+      return `https://wa.me/${WHATSAPP_NUMBER}?text=${text}`;
+    }
+
+    // Set links
+    const baseMsgIT = "Ciao! Vorrei informazioni/prenotare una gita in barca con Popeye Boat Experience. Data indicativa: ";
+    const baseMsgEN = "Hi! I'd like info / to book a boat tour with Popeye Boat Experience. Approx. date: ";
+
+    const waLinks = ["waLink","waHero","waQuick","waEvents","waContacts"]
+      .map(id => document.getElementById(id)).filter(Boolean);
+
+    const igLinks = ["igLink","igHero","igEvents","igGallery","igContacts"]
+      .map(id => document.getElementById(id)).filter(Boolean);
+
+    igLinks.forEach(a => a.href = INSTAGRAM_URL);
+
+    document.getElementById("googleReviewsLink").href = GOOGLE_REVIEWS_URL;
+    document.getElementById("googleLeaveLink").href = GOOGLE_LEAVE_REVIEW_URL;
+
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Tour buttons -> WhatsApp with tour name
+    document.querySelectorAll(".tour-wa").forEach(btn => {
+      const tour = btn.getAttribute("data-tour") || "Tour";
+      btn.addEventListener("click", (e) => {
+        // Language-aware message set below
+      });
+    });
+
+    // ==== i18n (simple) ====
+    const dict = {
+      it: {
+        nav_tours: "Gite", nav_boat: "La barca", nav_gallery: "Foto", nav_reviews: "Recensioni", nav_faq: "FAQ", nav_contacts: "Contatti",
+        hero_kicker: "Golfo di Follonica • Cale di Scarlino",
+        hero_title: "Vivi il mare della Toscana, come si deve.",
+        hero_sub: "Escursioni in barca da Marina di Scarlino tra acque cristalline, snorkeling e relax.",
+        cta_whatsapp: "Prenota su WhatsApp",
+        cta_instagram: "Scrivici su Instagram",
+        cta_book: "Prenota questa gita",
+        trust_departure: "Partenza: Marina di Scarlino",
+        trust_private: "Tour privati su richiesta",
+        quick_title: "Info rapide",
+        quick_where: "Dove:", quick_lang: "Lingue:", quick_contact: "Contatto:",
+        quick_note: "Rispondiamo il prima possibile 😊",
+        tours_title: "Le nostre gite",
+        tours_sub: "Semplici da scegliere, bellissime da vivere.",
+        meta_dep: "🕘 09:00", meta_return_17: "↩︎ 17:00", meta_full_day: "⏱️ Intera giornata",
+        meta_morning: "⏱️ Mattina", meta_sunset: "⏱️ Tramonto", meta_short: "⏱️ Breve", meta_islet: "⏱️ Isolotto",
+        read_more: "Descrizione completa",
+        delfino_lead: "Cale + sosta bagno + colazione a bordo + pausa pranzo in zona Punta Ala.",
+        tarta_lead: "Tour costa + soste bagno nelle cale + aperitivo a bordo prima del rientro.",
+        cicala_lead: "Sosta bagno al tramonto + apericena a bordo, atmosfera super.",
+        occhiata_lead: "Cala Violina + bagno con le “Occhiate”. Consigliata maschera.",
+        sparviero_lead: "Periplo dell’isolotto + caletta nord + snorkeling + aperitivo toscano.",
+        delfino_text: "Partenza alle ore 9 dalla Marina di Scarlino per una giornata tra Cala Martina, Cala Violina e Cala Civette. Sosta bagno in una delle baie e piccola colazione a bordo. Proseguimento verso Punta Ala con pausa pranzo. Rientro previsto per le ore 17.",
+        tarta_text: "Partenza alle ore 9 dalla Marina di Scarlino. Cala Martina, Cala Violina e Cala Civette con soste bagno. Aperitivo a bordo prima del rientro. Rientro previsto per le ore 13.",
+        cicala_text: "Partenza alle ore 18 dalla Marina di Scarlino. Cala Martina, Cala Violina e Cala Civette. Sosta bagno e apericena a bordo. Rientro previsto per le ore 21.",
+        occhiata_text: "Partenza alle ore 10 verso Cala Violina. Sosta bagno e snorkeling con le Occhiate. Piccolo aperitivo a bordo. Rientro previsto per le ore 12:30.",
+        sparviero_text: "Partenza alle ore 9 verso l’Isolotto dello Sparviero. Periplo con mare calmo, poi sosta bagno nella caletta nord. Aperitivo con stuzzichini toscani. Rientro previsto per le ore 14.",
+        events_title: "Eventi speciali",
+        events_sub: "Compleanni, addii, anniversari e tour privati: lo organizziamo su misura.",
+        events_cta: "Scrivici e raccontaci che tipo di esperienza vuoi: ti proponiamo l’opzione migliore.",
+        boat_title: "La barca",
+        boat_sub: "Sciallino 33: comoda, sicura, perfetta per vivere il mare in relax.",
+        boat_why_title: "Perché è speciale",
+        boat_b1: "Stabile e confortevole (ideale anche per famiglie)",
+        boat_b2: "Spazi per stendersi e rilassarsi",
+        boat_b3: "Perfetta per snorkeling e soste in cala",
+        boat_onboard_title: "A bordo",
+        boat_o1: "Acqua e bibite",
+        boat_o2: "Snack / aperitivo (in base al tour)",
+        boat_o3: "Consigli su cosa portare e dove fare snorkeling",
+        gallery_title: "Foto",
+        gallery_sub: "Qualche scatto — e il resto lo trovi su Instagram.",
+        cta_see_instagram: "Guarda su Instagram",
+        reviews_title: "Recensioni",
+        reviews_sub: "Leggi cosa dicono su Google.",
+        reviews_note: "Qui inseriamo l’embed delle recensioni Google (o un pulsante diretto alla pagina).",
+        cta_open_reviews: "Apri recensioni Google",
+        cta_leave_review: "Lascia una recensione",
+        faq_title: "FAQ",
+        faq1_q: "Cosa devo portare?",
+        faq1_a: "Costume, asciugamano, crema solare, cappello e (consigliata) maschera per snorkeling.",
+        faq2_q: "Se c’è vento o mare mosso?",
+        faq2_a: "Valutiamo insieme la sicurezza: in caso di meteo sfavorevole riprogrammiamo o rimborsiamo secondo accordi.",
+        faq3_q: "Bambini a bordo?",
+        faq3_a: "Sì, la barca è stabile e adatta anche alle famiglie. Scrivici per età e dettagli.",
+        contacts_title: "Contatti",
+        contacts_sub: "Scrivici su WhatsApp o Instagram: ti rispondiamo veloce.",
+        contacts_write: "Scrivici",
+        contacts_where: "Dove siamo",
+        contacts_port: "Imbarco: Marina di Scarlino",
+      },
+      en: {
+        nav_tours: "Tours", nav_boat: "The boat", nav_gallery: "Gallery", nav_reviews: "Reviews", nav_faq: "FAQ", nav_contacts: "Contacts",
+        hero_kicker: "Gulf of Follonica • Scarlino coves",
+        hero_title: "Experience Tuscany’s sea the right way.",
+        hero_sub: "Boat tours from Marina di Scarlino: crystal waters, snorkeling and pure relax.",
+        cta_whatsapp: "Book on WhatsApp",
+        cta_instagram: "DM us on Instagram",
+        cta_book: "Book this tour",
+        trust_departure: "Departure: Marina di Scarlino",
+        trust_private: "Private tours on request",
+        quick_title: "Quick info",
+        quick_where: "Where:", quick_lang: "Languages:", quick_contact: "Contact:",
+        quick_note: "We reply as soon as possible 😊",
+        tours_title: "Our tours",
+        tours_sub: "Easy to choose, amazing to live.",
+        meta_dep: "🕘 09:00", meta_return_17: "↩︎ 17:00", meta_full_day: "⏱️ Full day",
+        meta_morning: "⏱️ Morning", meta_sunset: "⏱️ Sunset", meta_short: "⏱️ Short", meta_islet: "⏱️ Islet",
+        read_more: "Full description",
+        delfino_lead: "Coves + swim stop + onboard breakfast + lunch stop near Punta Ala.",
+        tarta_lead: "Coast tour + swim stops + onboard aperitivo before return.",
+        cicala_lead: "Sunset swim stop + onboard aperitivo dinner, great vibes.",
+        occhiata_lead: "Cala Violina + swim with local fish (“Occhiate”). Mask recommended.",
+        sparviero_lead: "Islet loop + north cove swim + snorkeling + Tuscan aperitivo.",
+        delfino_text: "Departure at 09:00 from Marina di Scarlino for a full day across Cala Martina, Cala Violina and Cala Civette. Swim stop and onboard breakfast. Then Punta Ala area for a lunch break. Return around 17:00.",
+        tarta_text: "Departure at 09:00 from Marina di Scarlino. Cala Martina, Cala Violina and Cala Civette with swim stops. Onboard aperitivo before return. Back around 13:00.",
+        cicala_text: "Departure at 18:00 from Marina di Scarlino. Cala Martina, Cala Violina and Cala Civette. Swim stop and onboard aperitivo dinner. Return around 21:00.",
+        occhiata_text: "Departure at 10:00 towards Cala Violina. Swim stop and snorkeling with local fish. Small onboard aperitivo. Return around 12:30.",
+        sparviero_text: "Departure at 09:00 to the Sparviero islet. Calm-sea loop, then swim stop in the north cove. Tuscan aperitivo onboard. Return around 14:00.",
+        events_title: "Special events",
+        events_sub: "Birthdays, bachelor/hen parties, anniversaries and private tours — tailored for you.",
+        events_cta: "Message us with your idea: we’ll suggest the best option.",
+        boat_title: "The boat",
+        boat_sub: "Sciallino 33: comfortable, safe, perfect for relaxed sea days.",
+        boat_why_title: "Why it’s great",
+        boat_b1: "Stable and comfortable (great for families)",
+        boat_b2: "Space to lie down and relax",
+        boat_b3: "Perfect for snorkeling and cove stops",
+        boat_onboard_title: "On board",
+        boat_o1: "Water and soft drinks",
+        boat_o2: "Snacks / aperitivo (depending on tour)",
+        boat_o3: "Tips on what to bring and best snorkeling spots",
+        gallery_title: "Gallery",
+        gallery_sub: "A few shots — see more on Instagram.",
+        cta_see_instagram: "See on Instagram",
+        reviews_title: "Reviews",
+        reviews_sub: "See what people say on Google.",
+        reviews_note: "We’ll add the Google reviews embed here (or direct buttons).",
+        cta_open_reviews: "Open Google reviews",
+        cta_leave_review: "Leave a review",
+        faq_title: "FAQ",
+        faq1_q: "What should I bring?",
+        faq1_a: "Swimsuit, towel, sunscreen, hat, and (recommended) snorkeling mask.",
+        faq2_q: "What if it’s windy / rough sea?",
+        faq2_a: "Safety first: if conditions aren’t good, we reschedule or refund based on agreement.",
+        faq3_q: "Kids on board?",
+        faq3_a: "Yes. The boat is stable and family-friendly. Message us for age and details.",
+        contacts_title: "Contacts",
+        contacts_sub: "WhatsApp or Instagram DM — quick reply.",
+        contacts_write: "Message us",
+        contacts_where: "Where we are",
+        contacts_port: "Boarding: Marina di Scarlino",
+      }
+    };
+
+    let lang = "it";
+
+    function applyLang(next) {
+      lang = next;
+      document.documentElement.lang = lang;
+
+      document.querySelectorAll("[data-i18n]").forEach(el => {
+        const key = el.getAttribute("data-i18n");
+        if (dict[lang][key]) el.textContent = dict[lang][key];
+      });
+
+      // WhatsApp links language-aware
+      const baseMsg = (lang === "it") ? baseMsgIT : baseMsgEN;
+      waLinks.forEach(a => a.href = waUrl(baseMsg));
+
+      document.querySelectorAll(".tour-wa").forEach(btn => {
+        const tour = btn.getAttribute("data-tour") || "Tour";
+        const msg = (lang === "it")
+          ? `${baseMsgIT}\nTour: ${tour}\nData indicativa: `
+          : `${baseMsgEN}\nTour: ${tour}\nApprox. date: `;
+        btn.href = waUrl(msg);
+      });
+
+      document.getElementById("langToggle").textContent = (lang === "it") ? "EN" : "IT";
+    }
+
+    document.getElementById("langToggle").addEventListener("click", () => {
+      applyLang(lang === "it" ? "en" : "it");
+    });
+
+    applyLang("it");
+  </script>
 </body>
 </html>
