@@ -340,20 +340,21 @@
         <div class="two-col">
           <div class="card">
             <h3 data-i18n="contacts_write">Scrivici</h3>
-            <p><strong>WhatsApp:</strong> +39 9985429335</p>
+            <p><strong>WhatsApp:</strong> +39 3385429335</p>
             <p><strong>Email:</strong> popeyeboatexperience@hotmail.com</p>
-            <div class="cta-row mt-12">
-              <a class="btn btn-primary" id="waContacts" href="#" target="_blank" rel="noreferrer" data-i18n="cta_whatsapp">Prenota su WhatsApp</a>
-              <a class="btn btn-ghost" id="igContacts" href="#" target="_blank" rel="noreferrer" data-i18n="cta_instagram">Scrivici su Instagram</a>
-            </div>
           </div>
 
           <div class="card">
             <h3 data-i18n="contacts_where">Dove siamo</h3>
             <p data-i18n="contacts_port">Imbarco: Marina di Scarlino</p>
             <div class="map">
-              <!-- Metti qui l’embed di Google Maps (ti guido allo step successivo) -->
-              <div class="ph">Google Maps embed</div>
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1738.273683603952!2d10.78422395170421!3d42.885164469127844!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1329db44b909b183%3A0xd800d55ae8066f97!2sPopeye%20Boat%20Experience!5e0!3m2!1sit!2sit!4v1772299163478!5m2!1sit!2sit"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                allowfullscreen>
+                
+                </iframe>
             </div>
           </div>
         </div>
@@ -382,8 +383,8 @@
     }
 
     // Set links
-    const baseMsgIT = "Ciao! Vorrei informazioni/prenotare una gita in barca con Popeye Boat Experience. Data indicativa: ";
-    const baseMsgEN = "Hi! I'd like info / to book a boat tour with Popeye Boat Experience. Approx. date: ";
+    const baseMsgIT = "Ciao! Vorrei informazioni/prenotare una gita in barca con Popeye Boat Experience.";
+    const baseMsgEN = "Hi! I'd like info / to book a boat tour with Popeye Boat Experience.";
 
     const waLinks = ["waLink","waHero","waQuick","waEvents","waContacts"]
       .map(id => document.getElementById(id)).filter(Boolean);
@@ -397,14 +398,6 @@
     document.getElementById("googleLeaveLink").href = GOOGLE_LEAVE_REVIEW_URL;
 
     document.getElementById("year").textContent = new Date().getFullYear();
-
-    // Tour buttons -> WhatsApp with tour name
-    document.querySelectorAll(".tour-wa").forEach(btn => {
-      const tour = btn.getAttribute("data-tour") || "Tour";
-      btn.addEventListener("click", (e) => {
-        // Language-aware message set below
-      });
-    });
 
     // ==== i18n (simple) ====
     const dict = {
@@ -424,7 +417,7 @@
         tours_title: "Le nostre gite",
         tours_sub: "Semplici da scegliere, bellissime da vivere.",
         meta_dep: "🕘 09:00", meta_return_17: "↩︎ 17:00", meta_full_day: "⏱️ Intera giornata",
-        meta_morning: "⏱️ Mattina", meta_sunset: "⏱️ Tramonto", meta_short: "⏱️ Breve", meta_islet: "⏱️ Isolotto",
+        meta_morning: "⏱️ Mattina", meta_sunset: "⏱️ Tramonto", meta_short: "⏱️ Breve", meta_islet: "⏱️ Mezza Giornata",
         read_more: "Descrizione completa",
         delfino_lead: "Cale + sosta bagno + colazione a bordo + pausa pranzo in zona Punta Ala.",
         tarta_lead: "Tour costa + soste bagno nelle cale + aperitivo a bordo prima del rientro.",
@@ -486,7 +479,7 @@
         tours_title: "Our tours",
         tours_sub: "Easy to choose, amazing to live.",
         meta_dep: "🕘 09:00", meta_return_17: "↩︎ 17:00", meta_full_day: "⏱️ Full day",
-        meta_morning: "⏱️ Morning", meta_sunset: "⏱️ Sunset", meta_short: "⏱️ Short", meta_islet: "⏱️ Islet",
+        meta_morning: "⏱️ Morning", meta_sunset: "⏱️ Sunset", meta_short: "⏱️ Short", meta_islet: "⏱️ Half Day",
         read_more: "Full description",
         delfino_lead: "Coves + swim stop + onboard breakfast + lunch stop near Punta Ala.",
         tarta_lead: "Coast tour + swim stops + onboard aperitivo before return.",
@@ -552,8 +545,8 @@
       document.querySelectorAll(".tour-wa").forEach(btn => {
         const tour = btn.getAttribute("data-tour") || "Tour";
         const msg = (lang === "it")
-          ? `${baseMsgIT}\nTour: ${tour}\nData indicativa: `
-          : `${baseMsgEN}\nTour: ${tour}\nApprox. date: `;
+          ? `${baseMsgIT}\nTour: ${tour}`
+          : `${baseMsgEN}\nTour: ${tour}`;
         btn.href = waUrl(msg);
       });
 
