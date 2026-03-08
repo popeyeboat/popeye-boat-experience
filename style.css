@@ -107,8 +107,30 @@ a{ color: inherit; text-decoration: none; }
 
 .hero-inner{
   display: grid;
-  gap: 18px;
-  align-items: start;
+  gap: 28px;
+  align-items: center;
+}
+
+.hero-image-box{
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  max-width: 460px;
+  width: 100%;
+  justify-self: end;
+}
+
+.hero-image-box img{
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+@media (min-width: 860px){
+  .hero-inner{
+    grid-template-columns: 1.15fr .85fr;
+  }
 }
 
 .kicker{
@@ -250,21 +272,46 @@ a{ color: inherit; text-decoration: none; }
 .gallery-grid{
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 12px;
+  gap: 14px;
 }
-.ph{
-  height: 160px;
-  border-radius: var(--radius);
-  background: rgba(14,165,164,.10);
-  border: 1px dashed rgba(11,34,57,.22);
+
+.gallery-item{
   display: flex;
   align-items: center;
   justify-content: center;
-  font-weight: 900;
-  color: rgba(11,34,57,.70);
+  min-height: 240px;
+  padding: 10px;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: 0 10px 26px rgba(11,34,57,.06);
+  overflow: hidden;
+  transition: transform .18s ease, box-shadow .18s ease;
 }
 
-.map .ph{ height: 220px; }
+.gallery-item:hover{
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+}
+
+.gallery-item img{
+  width: 100%;
+  height: 100%;
+  max-height: 320px;
+  object-fit: contain;
+  display: block;
+  border-radius: 12px;
+}
+
+@media (min-width: 860px){
+  .gallery-grid{
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .gallery-item{
+    min-height: 280px;
+  }
+}
 
 .center{ text-align: center; }
 .mt-12{ margin-top: 12px; }
@@ -317,19 +364,6 @@ a{ color: inherit; text-decoration: none; }
   height: 28px;
   display: block;
   object-fit: contain;
-}
-.hero-image-box{
-  border-radius: var(--radius);
-  overflow: hidden;
-  box-shadow: var(--shadow);
-}
-
-.hero-image-box img{
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
 
 .gallery-grid img{
   width: 100%;
