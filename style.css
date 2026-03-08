@@ -115,7 +115,7 @@ a{ color: inherit; text-decoration: none; }
   border-radius: var(--radius);
   overflow: hidden;
   box-shadow: var(--shadow);
-  max-width: 460px;
+  max-width: 520px;
   width: 100%;
   justify-self: end;
 }
@@ -286,12 +286,6 @@ a{ color: inherit; text-decoration: none; }
   border-radius: var(--radius);
   box-shadow: 0 10px 26px rgba(11,34,57,.06);
   overflow: hidden;
-  transition: transform .18s ease, box-shadow .18s ease;
-}
-
-.gallery-item:hover{
-  transform: translateY(-2px);
-  box-shadow: var(--shadow);
 }
 
 .gallery-item img{
@@ -301,6 +295,11 @@ a{ color: inherit; text-decoration: none; }
   object-fit: contain;
   display: block;
   border-radius: 12px;
+  transition: transform .28s ease;
+}
+
+.gallery-item:hover img{
+  transform: scale(1.06);
 }
 
 @media (min-width: 860px){
@@ -333,7 +332,7 @@ a{ color: inherit; text-decoration: none; }
 
 @media (min-width: 860px){
   .nav{ display: flex; }
-  .hero-inner{ grid-template-columns: 1.3fr .7fr; }
+  .hero-inner{ grid-template-columns: 1.15fr .85fr; }
   .grid{ grid-template-columns: repeat(2, 1fr); }
   .two-col{ grid-template-columns: repeat(2, 1fr); }
   .gallery-grid{ grid-template-columns: repeat(3, 1fr); }
@@ -359,15 +358,10 @@ a{ color: inherit; text-decoration: none; }
   border-radius: var(--radius);
   box-shadow: 0 10px 25px rgba(11,34,57,.08);
 }
+
 .brand-logo{
   width: 28px;
   height: 28px;
   display: block;
   object-fit: contain;
-
-.gallery-grid img{
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: var(--radius);
 }
