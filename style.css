@@ -312,3 +312,28 @@ a{ color: inherit; text-decoration: none; }
   border-radius: var(--radius);
   box-shadow: 0 10px 25px rgba(11,34,57,.08);
 }
+.brand-logo{
+  width: 28px;
+  height: 28px;
+  display: block;
+  object-fit: contain;
+}
+.hero-image-box{
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.hero-image-box img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.gallery-grid img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: var(--radius);
+}
